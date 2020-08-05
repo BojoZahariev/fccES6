@@ -134,3 +134,39 @@ delete foods.strawberries;
 // Only change code above this line
 
 console.log(foods);
+
+//Basic Data Structures: Check if an Object has a Property
+
+users.hasOwnProperty('Alan');
+'Alan' in users;
+// both return true
+
+let users = {
+  Alan: {
+    age: 27,
+    online: true
+  },
+  Jeff: {
+    age: 32,
+    online: true
+  },
+  Sarah: {
+    age: 48,
+    online: true
+  },
+  Ryan: {
+    age: 19,
+    online: true
+  }
+};
+
+function isEveryoneHere(obj) {
+  // Only change code below this line
+  if (users.hasOwnProperty('Alan') && 'Jeff' in users && 'Sarah' in users && 'Ryan' in users) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+console.log(isEveryoneHere(users));
