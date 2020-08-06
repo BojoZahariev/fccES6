@@ -342,3 +342,14 @@ repeatStringNumTimes('abc', 3);
 function repeatStringNumTimes(str, num) {
   return num > 0 ? str + repeatStringNumTimes(str, num - 1) : '';
 }
+
+//Basic Algorithm Scripting: Truncate a String
+
+function truncateString(str, num) {
+  let myStr = str.slice(0, num);
+  let myStr2 = `${myStr}...`;
+
+  return `${str.length > num ? myStr2 : myStr}`;
+}
+
+truncateString('A-tisket a-tasket A green and yellow basket', 8);
