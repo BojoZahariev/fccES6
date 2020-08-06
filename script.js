@@ -241,3 +241,36 @@ function addFriend(userObj, friend) {
 }
 
 console.log(addFriend(user, 'Pete'));
+
+//Basic Algorithm Scripting: Reverse a StringPassed
+
+function reverseString(str) {
+  return str
+    .split('')
+    .reverse()
+    .join('');
+}
+
+reverseString('hello');
+
+//Basic Algorithm Scripting: Factorialize a Number
+
+function factorialize(num) {
+  let sum = 1;
+  for (let i = 1; i <= num; i++) {
+    sum *= i;
+  }
+  num = sum;
+  return num;
+}
+
+factorialize(5);
+
+function factorialize(num) {
+  for (var product = 1; num > 0; num--) {
+    product *= num;
+  }
+  return product;
+}
+
+factorialize(5);
