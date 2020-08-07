@@ -393,3 +393,14 @@ function frankenSplice(arr1, arr2, n) {
 }
 
 frankenSplice([1, 2, 3], [4, 5, 6], 1);
+
+//Basic Algorithm Scripting: Falsy Bouncer
+
+function bouncer(arr) {
+  //use !! to convert to boolean
+  let filtered = arr.filter(el => !!el);
+
+  return filtered;
+}
+
+bouncer([7, 'ate', '', false, 9]);
