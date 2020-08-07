@@ -404,3 +404,16 @@ function bouncer(arr) {
 }
 
 bouncer([7, 'ate', '', false, 9]);
+
+//Basic Algorithm Scripting: Where do I Belong
+
+function getIndexToIns(arr, num) {
+  arr.sort((a, b) => a - b);
+
+  let ind = arr.findIndex(el => el >= num);
+  if (ind === -1) {
+    return arr.length;
+  } else return ind;
+}
+
+getIndexToIns([2, 5, 10], 15);
