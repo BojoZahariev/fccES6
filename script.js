@@ -386,7 +386,7 @@ titleCase("I'm a little tea pot");
 //Basic Algorithm Scripting: Slice and Splice
 
 function frankenSplice(arr1, arr2, n) {
-  let arr3 = arr2.slice();
+  let arr3 = [...arr2];
   arr3.splice(n, 0, ...arr1);
 
   return arr3;
