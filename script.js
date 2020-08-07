@@ -353,3 +353,12 @@ function truncateString(str, num) {
 }
 
 truncateString('A-tisket a-tasket A green and yellow basket', 8);
+
+//Basic Algorithm Scripting: Finders Keepers
+
+function findElement(arr, func) {
+  let num = arr.find(func);
+  return num;
+}
+
+findElement([1, 2, 3, 4], num => num % 2 === 0);
