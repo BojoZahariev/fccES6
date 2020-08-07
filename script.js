@@ -369,3 +369,27 @@ function booWho(bool) {
 }
 
 booWho(null);
+
+//Basic Algorithm Scripting: Title Case a Sentence
+
+function titleCase(str) {
+  let arr = str.split(' ');
+  let arr2 = arr.map(element => {
+    return element.charAt(0).toUpperCase() + element.slice(1).toLowerCase();
+  });
+
+  return arr2.join(' ');
+}
+
+titleCase("I'm a little tea pot");
+
+//Basic Algorithm Scripting: Slice and Splice
+
+function frankenSplice(arr1, arr2, n) {
+  let arr3 = arr2.slice();
+  arr3.splice(n, 0, ...arr1);
+
+  return arr3;
+}
+
+frankenSplice([1, 2, 3], [4, 5, 6], 1);
