@@ -428,3 +428,15 @@ function mutation(arr) {
 }
 
 mutation(['hello', 'hey']);
+
+//Basic Algorithm Scripting: Chunky Monkey
+
+function chunkArrayInGroups(arr, size) {
+  var arr2 = [];
+  for (var i = 0; i < arr.length; i += size) {
+    arr2.push(arr.slice(i, i + size));
+  }
+  return arr2;
+}
+
+chunkArrayInGroups([0, 1, 2, 3, 4, 5], 3);
