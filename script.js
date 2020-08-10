@@ -417,3 +417,14 @@ function getIndexToIns(arr, num) {
 }
 
 getIndexToIns([2, 5, 10], 15);
+
+//Basic Algorithm Scripting: Mutations
+function mutation(arr) {
+  let myArray = arr[1].split('');
+
+  let a = myArray.every(el => arr[0].toUpperCase().includes(el.toUpperCase()));
+
+  return a;
+}
+
+mutation(['hello', 'hey']);
