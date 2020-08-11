@@ -452,3 +452,23 @@ let dog = {
 };
 
 dog.sayLegs();
+
+//Object Oriented Programming: Make Code More Reusable with the this Keyword
+
+let dog = {
+  name: 'Spot',
+  numLegs: 4,
+  sayLegs: function() {
+    return 'This dog has ' + this.numLegs + ' legs.';
+  }
+};
+
+//Object Oriented Programming: Define a Constructor Function
+
+function Dog() {
+  this.name = 'Albert';
+  this.color = 'blue';
+  this.numLegs = 4;
+}
+
+dog.sayLegs();
