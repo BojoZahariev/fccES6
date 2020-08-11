@@ -440,3 +440,15 @@ function chunkArrayInGroups(arr, size) {
 }
 
 chunkArrayInGroups([0, 1, 2, 3, 4, 5], 3);
+
+//Object Oriented Programming: Create a Method on an Object
+
+let dog = {
+  name: 'Spot',
+  numLegs: 4,
+  sayLegs: function() {
+    return `This dog has ${dog.numLegs} legs.`;
+  }
+};
+
+dog.sayLegs();
