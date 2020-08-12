@@ -491,3 +491,13 @@ function Dog(name, color) {
 let terrier = new Dog('Chocho', 'black');
 
 dog.sayLegs();
+
+//Object Oriented Programming: Verify an Object's Constructor with instanceof
+
+function House(numBedrooms) {
+  this.numBedrooms = numBedrooms;
+}
+
+// Only change code below this line
+let myHouse = new House(4);
+myHouse instanceof House; //true
