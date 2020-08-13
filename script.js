@@ -542,12 +542,24 @@ let beagle = new Dog('Snoopy');
 let ownProps = [];
 let prototypeProps = [];
 
-// Only change code below this line
-
 for (let property in beagle) {
   if (beagle.hasOwnProperty(property)) {
     ownProps.push(property);
   } else {
     prototypeProps.push(property);
+  }
+}
+
+//Object Oriented Programming: Understand the Constructor Property
+
+function Dog(name) {
+  this.name = name;
+}
+
+function joinDogFraternity(candidate) {
+  if (candidate.constructor === Dog) {
+    return true;
+  } else {
+    return false;
   }
 }
