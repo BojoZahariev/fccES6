@@ -758,3 +758,13 @@ let glideMixin = function(obj) {
 
 glideMixin(bird);
 glideMixin(boat);
+
+//Object Oriented Programming: Use Closure to Protect Properties Within an Object from Being Modified Externally
+
+function Bird() {
+  let weight = 15;
+
+  this.getWeight = function() {
+    return weight;
+  };
+}
