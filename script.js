@@ -1277,3 +1277,15 @@ function sliceArray(anim, beginSlice, endSlice) {
 }
 var inputAnim = ['Cat', 'Dog', 'Tiger', 'Zebra', 'Ant'];
 sliceArray(inputAnim, 1, 3);
+
+//Functional Programming: Remove Elements from an Array Using slice Instead of splice
+
+function nonMutatingSplice(cities) {
+  // Only change code below this line
+  let arr = cities.slice(0, 3);
+  return arr;
+
+  // Only change code above this line
+}
+var inputCities = ['Chicago', 'Delhi', 'Islamabad', 'London', 'Berlin'];
+nonMutatingSplice(inputCities);
