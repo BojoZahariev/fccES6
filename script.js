@@ -1265,3 +1265,15 @@ Array.prototype.myFilter = function(callback) {
 var new_s = s.myFilter(function(item) {
   return item % 2 === 1;
 });
+
+//Functional Programming: Return Part of an Array Using the slice Method
+
+function sliceArray(anim, beginSlice, endSlice) {
+  // Only change code below this line
+  let arr = anim.slice(beginSlice, endSlice);
+  return arr;
+
+  // Only change code above this line
+}
+var inputAnim = ['Cat', 'Dog', 'Tiger', 'Zebra', 'Ant'];
+sliceArray(inputAnim, 1, 3);
