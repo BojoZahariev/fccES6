@@ -49,7 +49,7 @@ const makeServerRequest = new Promise((resolve, reject) => {
   }
 });
 
-makeServerRequest.then(result => {
+makeServerRequest.then((result) => {
   console.log(result);
 });
 
@@ -65,11 +65,11 @@ const makeServerRequest = new Promise((resolve, reject) => {
   }
 });
 
-makeServerRequest.then(result => {
+makeServerRequest.then((result) => {
   console.log(result);
 });
 
-makeServerRequest.catch(error => {
+makeServerRequest.catch((error) => {
   console.log(error);
 });
 
@@ -106,7 +106,7 @@ let foods = {
   plums: 28,
   bananas: 13,
   grapes: 35,
-  strawberries: 27
+  strawberries: 27,
 };
 
 function checkInventory(scannedItem) {
@@ -124,7 +124,7 @@ let foods = {
   plums: 28,
   bananas: 13,
   grapes: 35,
-  strawberries: 27
+  strawberries: 27,
 };
 
 // Only change code below this line
@@ -144,20 +144,20 @@ users.hasOwnProperty('Alan');
 let users = {
   Alan: {
     age: 27,
-    online: true
+    online: true,
   },
   Jeff: {
     age: 32,
-    online: true
+    online: true,
   },
   Sarah: {
     age: 48,
-    online: true
+    online: true,
   },
   Ryan: {
     age: 19,
-    online: true
-  }
+    online: true,
+  },
 };
 
 function isEveryoneHere(obj) {
@@ -176,20 +176,20 @@ console.log(isEveryoneHere(users));
 let users = {
   Alan: {
     age: 27,
-    online: false
+    online: false,
   },
   Jeff: {
     age: 32,
-    online: true
+    online: true,
   },
   Sarah: {
     age: 48,
-    online: false
+    online: false,
   },
   Ryan: {
     age: 19,
-    online: true
-  }
+    online: true,
+  },
 };
 function countOnline(obj) {
   // change code below this line
@@ -227,9 +227,9 @@ let user = {
     location: {
       city: 'San Francisco',
       state: 'CA',
-      country: 'USA'
-    }
-  }
+      country: 'USA',
+    },
+  },
 };
 
 function addFriend(userObj, friend) {
@@ -245,10 +245,7 @@ console.log(addFriend(user, 'Pete'));
 //Basic Algorithm Scripting: Reverse a StringPassed
 
 function reverseString(str) {
-  return str
-    .split('')
-    .reverse()
-    .join('');
+  return str.split('').reverse().join('');
 }
 
 reverseString('hello');
@@ -295,7 +292,7 @@ findLongestWordLength('The quick brown fox jumped over the lazy dog');
 function largestOfFour(arr) {
   let myArray = [];
 
-  arr.forEach(element => {
+  arr.forEach((element) => {
     let largest = element[0];
     for (let i = 0; i < element.length; i++) {
       // console.log(element[i], largest)
@@ -314,7 +311,7 @@ largestOfFour([
   [4, 5, 1, 3],
   [13, 27, 18, 26],
   [32, 35, 37, 39],
-  [1000, 1001, 857, 1]
+  [1000, 1001, 857, 1],
 ]);
 
 //Basic Algorithm Scripting: Confirm the Ending
@@ -361,7 +358,7 @@ function findElement(arr, func) {
   return num;
 }
 
-findElement([1, 2, 3, 4], num => num % 2 === 0);
+findElement([1, 2, 3, 4], (num) => num % 2 === 0);
 
 //Basic Algorithm Scripting: Boo who
 function booWho(bool) {
@@ -374,7 +371,7 @@ booWho(null);
 
 function titleCase(str) {
   let arr = str.split(' ');
-  let arr2 = arr.map(element => {
+  let arr2 = arr.map((element) => {
     return element.charAt(0).toUpperCase() + element.slice(1).toLowerCase();
   });
 
@@ -398,7 +395,7 @@ frankenSplice([1, 2, 3], [4, 5, 6], 1);
 
 function bouncer(arr) {
   //use !! to convert to boolean
-  let filtered = arr.filter(el => !!el);
+  let filtered = arr.filter((el) => !!el);
 
   return filtered;
 }
@@ -410,7 +407,7 @@ bouncer([7, 'ate', '', false, 9]);
 function getIndexToIns(arr, num) {
   arr.sort((a, b) => a - b);
 
-  let ind = arr.findIndex(el => el >= num);
+  let ind = arr.findIndex((el) => el >= num);
   if (ind === -1) {
     return arr.length;
   } else return ind;
@@ -422,7 +419,7 @@ getIndexToIns([2, 5, 10], 15);
 function mutation(arr) {
   let myArray = arr[1].split('');
 
-  let a = myArray.every(el => arr[0].toUpperCase().includes(el.toUpperCase()));
+  let a = myArray.every((el) => arr[0].toUpperCase().includes(el.toUpperCase()));
 
   return a;
 }
@@ -446,9 +443,9 @@ chunkArrayInGroups([0, 1, 2, 3, 4, 5], 3);
 let dog = {
   name: 'Spot',
   numLegs: 4,
-  sayLegs: function() {
+  sayLegs: function () {
     return `This dog has ${dog.numLegs} legs.`;
-  }
+  },
 };
 
 dog.sayLegs();
@@ -458,9 +455,9 @@ dog.sayLegs();
 let dog = {
   name: 'Spot',
   numLegs: 4,
-  sayLegs: function() {
+  sayLegs: function () {
     return 'This dog has ' + this.numLegs + ' legs.';
-  }
+  },
 };
 
 //Object Oriented Programming: Define a Constructor Function
@@ -572,12 +569,12 @@ function Dog(name) {
 
 Dog.prototype = {
   numLegs: 4,
-  eat: function() {
+  eat: function () {
     console.log('nom nom nom');
   },
-  describe: function() {
+  describe: function () {
     console.log('My name is ' + this.name);
-  }
+  },
 };
 
 //Object Oriented Programming: Remember to Set the Constructor Property when Changing the Prototype
@@ -590,12 +587,12 @@ function Dog(name) {
 Dog.prototype = {
   constructor: Dog,
   numLegs: 4,
-  eat: function() {
+  eat: function () {
     console.log('nom nom nom');
   },
-  describe: function() {
+  describe: function () {
     console.log('My name is ' + this.name);
-  }
+  },
 };
 
 //Object Oriented Programming: Understand Where an Object’s Prototype Comes From
@@ -629,7 +626,7 @@ function Cat(name) {
 }
 
 Cat.prototype = {
-  constructor: Cat
+  constructor: Cat,
 };
 
 function Bear(name) {
@@ -637,16 +634,16 @@ function Bear(name) {
 }
 
 Bear.prototype = {
-  constructor: Bear
+  constructor: Bear,
 };
 
 function Animal() {}
 
 Animal.prototype = {
   constructor: Animal,
-  eat: function() {
+  eat: function () {
     console.log('nom nom nom');
-  }
+  },
 };
 
 //Object Oriented Programming: Inherit Behaviors from a Supertype
@@ -655,9 +652,9 @@ function Animal() {}
 
 Animal.prototype = {
   constructor: Animal,
-  eat: function() {
+  eat: function () {
     console.log('nom nom nom');
-  }
+  },
 };
 
 // Only change code below this line
@@ -671,9 +668,9 @@ function Animal() {}
 
 Animal.prototype = {
   constructor: Animal,
-  eat: function() {
+  eat: function () {
     console.log('nom nom nom');
-  }
+  },
 };
 
 function Dog() {}
@@ -702,7 +699,7 @@ let beagle = new Dog();
 //Object Oriented Programming: Add Methods After Inheritance
 
 function Animal() {}
-Animal.prototype.eat = function() {
+Animal.prototype.eat = function () {
   console.log('nom nom nom');
 };
 
@@ -711,7 +708,7 @@ function Dog() {}
 Dog.prototype = Object.create(Animal.prototype);
 Dog.prototype.constructor = Dog;
 
-Dog.prototype.bark = function() {
+Dog.prototype.bark = function () {
   console.log('Woof!');
 };
 
@@ -721,7 +718,7 @@ let beagle = new Dog();
 
 function Bird() {}
 
-Bird.prototype.fly = function() {
+Bird.prototype.fly = function () {
   return 'I am flying!';
 };
 
@@ -729,7 +726,7 @@ function Penguin() {}
 Penguin.prototype = Object.create(Bird.prototype);
 Penguin.prototype.constructor = Penguin;
 
-Penguin.prototype.fly = function() {
+Penguin.prototype.fly = function () {
   return 'Alas, this is a flightless bird.';
 };
 
@@ -740,18 +737,18 @@ console.log(penguin.fly());
 
 let bird = {
   name: 'Donald',
-  numLegs: 2
+  numLegs: 2,
 };
 
 let boat = {
   name: 'Warrior',
-  type: 'race-boat'
+  type: 'race-boat',
 };
 
 // Only change code below this line
 
-let glideMixin = function(obj) {
-  obj.glide = function() {
+let glideMixin = function (obj) {
+  obj.glide = function () {
     console.log('Gliding, wooosh!');
   };
 };
@@ -764,42 +761,42 @@ glideMixin(boat);
 function Bird() {
   let weight = 15;
 
-  this.getWeight = function() {
+  this.getWeight = function () {
     return weight;
   };
 }
 
 //Object Oriented Programming: Understand the Immediately Invoked Function Expression (IIFE)
 
-(function() {
+(function () {
   console.log('A cozy nest is ready');
 })();
 
 //Object Oriented Programming: Use an IIFE to Create a Module
 
-let isCuteMixin = function(obj) {
-  obj.isCute = function() {
+let isCuteMixin = function (obj) {
+  obj.isCute = function () {
     return true;
   };
 };
-let singMixin = function(obj) {
-  obj.sing = function() {
+let singMixin = function (obj) {
+  obj.sing = function () {
     console.log('Singing to an awesome tune');
   };
 };
 
-let funModule = (function() {
+let funModule = (function () {
   return {
-    isCuteMixin: function(obj) {
-      obj.isCute = function() {
+    isCuteMixin: function (obj) {
+      obj.isCute = function () {
         return true;
       };
     },
-    singMixin: function(obj) {
-      obj.sing = function() {
+    singMixin: function (obj) {
+      obj.sing = function () {
         console.log('Singing to an awesome tune');
       };
-    }
+    },
   };
 })();
 
@@ -813,7 +810,7 @@ Given a function (representing the tea type) and number of cups needed, the
 following function returns an array of strings (each representing a cup of
 a specific type of tea).
 */
-const getTea = numOfCups => {
+const getTea = (numOfCups) => {
   const teaCups = [];
 
   for (let cups = 1; cups <= numOfCups; cups += 1) {
@@ -860,24 +857,24 @@ console.log(tea4GreenTeamFCC, tea4BlackTeamFCC);
 //Functional Programming: Understand the Hazards of Using Imperative Code
 
 // tabs is an array of titles of each site open within the window
-var Window = function(tabs) {
+var Window = function (tabs) {
   this.tabs = tabs; // We keep a record of the array inside the object
 };
 
 // When you join two windows into one window
-Window.prototype.join = function(otherWindow) {
+Window.prototype.join = function (otherWindow) {
   this.tabs = this.tabs.concat(otherWindow.tabs);
   return this;
 };
 
 // When you open a new tab at the end
-Window.prototype.tabOpen = function(tab) {
+Window.prototype.tabOpen = function (tab) {
   this.tabs.push('new tab'); // Let's open a new tab for now
   return this;
 };
 
 // When you close a tab
-Window.prototype.tabClose = function(index) {
+Window.prototype.tabClose = function (index) {
   // Only change code below this line
 
   var tabsBeforeIndex = this.tabs.splice(0, index); // Get the tabs before the tab
@@ -933,7 +930,7 @@ var bookList = [
   'The Hound of the Baskervilles',
   'On The Electrodynamics of Moving Bodies',
   'Philosophiæ Naturalis Principia Mathematica',
-  'Disquisitiones Arithmeticae'
+  'Disquisitiones Arithmeticae',
 ];
 
 // Change code below this line
@@ -989,7 +986,7 @@ var watchList = [
     imdbVotes: '1,446,708',
     imdbID: 'tt1375666',
     Type: 'movie',
-    Response: 'True'
+    Response: 'True',
   },
   {
     Title: 'Interstellar',
@@ -1011,7 +1008,7 @@ var watchList = [
     imdbVotes: '910,366',
     imdbID: 'tt0816692',
     Type: 'movie',
-    Response: 'True'
+    Response: 'True',
   },
   {
     Title: 'The Dark Knight',
@@ -1021,7 +1018,8 @@ var watchList = [
     Runtime: '152 min',
     Genre: 'Action, Adventure, Crime',
     Director: 'Christopher Nolan',
-    Writer: 'Jonathan Nolan (screenplay), Christopher Nolan (screenplay), Christopher Nolan (story), David S. Goyer (story), Bob Kane (characters)',
+    Writer:
+      'Jonathan Nolan (screenplay), Christopher Nolan (screenplay), Christopher Nolan (story), David S. Goyer (story), Bob Kane (characters)',
     Actors: 'Christian Bale, Heath Ledger, Aaron Eckhart, Michael Caine',
     Plot:
       'When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, the caped crusader must come to terms with one of the greatest psychological tests of his ability to fight injustice.',
@@ -1034,7 +1032,7 @@ var watchList = [
     imdbVotes: '1,652,832',
     imdbID: 'tt0468569',
     Type: 'movie',
-    Response: 'True'
+    Response: 'True',
   },
   {
     Title: 'Batman Begins',
@@ -1044,7 +1042,8 @@ var watchList = [
     Runtime: '140 min',
     Genre: 'Action, Adventure',
     Director: 'Christopher Nolan',
-    Writer: 'Bob Kane (characters), David S. Goyer (story), Christopher Nolan (screenplay), David S. Goyer (screenplay)',
+    Writer:
+      'Bob Kane (characters), David S. Goyer (story), Christopher Nolan (screenplay), David S. Goyer (screenplay)',
     Actors: 'Christian Bale, Michael Caine, Liam Neeson, Katie Holmes',
     Plot:
       'After training with his mentor, Batman begins his fight to free crime-ridden Gotham City from the corruption that Scarecrow and the League of Shadows have cast upon it.',
@@ -1057,7 +1056,7 @@ var watchList = [
     imdbVotes: '972,584',
     imdbID: 'tt0372784',
     Type: 'movie',
-    Response: 'True'
+    Response: 'True',
   },
   {
     Title: 'Avatar',
@@ -1080,13 +1079,13 @@ var watchList = [
     imdbVotes: '876,575',
     imdbID: 'tt0499549',
     Type: 'movie',
-    Response: 'True'
-  }
+    Response: 'True',
+  },
 ];
 
 // Only change code below this line
 
-var ratings = watchList.map(element => {
+var ratings = watchList.map((element) => {
   return { title: element['Title'], rating: element['imdbRating'] };
 });
 
@@ -1099,16 +1098,16 @@ console.log(JSON.stringify(ratings));
 // The global variable
 var s = [23, 65, 98, 5];
 
-Array.prototype.myMap = function(callback) {
+Array.prototype.myMap = function (callback) {
   var newArray = [];
   // Only change code below this line
 
-  this.forEach(a => newArray.push(callback(a)));
+  this.forEach((a) => newArray.push(callback(a)));
   // Only change code above this line
   return newArray;
 };
 
-var new_s = s.myMap(function(item) {
+var new_s = s.myMap(function (item) {
   return item * 2;
 });
 
@@ -1137,7 +1136,7 @@ var watchList = [
     imdbVotes: '1,446,708',
     imdbID: 'tt1375666',
     Type: 'movie',
-    Response: 'True'
+    Response: 'True',
   },
   {
     Title: 'Interstellar',
@@ -1159,7 +1158,7 @@ var watchList = [
     imdbVotes: '910,366',
     imdbID: 'tt0816692',
     Type: 'movie',
-    Response: 'True'
+    Response: 'True',
   },
   {
     Title: 'The Dark Knight',
@@ -1169,7 +1168,8 @@ var watchList = [
     Runtime: '152 min',
     Genre: 'Action, Adventure, Crime',
     Director: 'Christopher Nolan',
-    Writer: 'Jonathan Nolan (screenplay), Christopher Nolan (screenplay), Christopher Nolan (story), David S. Goyer (story), Bob Kane (characters)',
+    Writer:
+      'Jonathan Nolan (screenplay), Christopher Nolan (screenplay), Christopher Nolan (story), David S. Goyer (story), Bob Kane (characters)',
     Actors: 'Christian Bale, Heath Ledger, Aaron Eckhart, Michael Caine',
     Plot:
       'When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, the caped crusader must come to terms with one of the greatest psychological tests of his ability to fight injustice.',
@@ -1182,7 +1182,7 @@ var watchList = [
     imdbVotes: '1,652,832',
     imdbID: 'tt0468569',
     Type: 'movie',
-    Response: 'True'
+    Response: 'True',
   },
   {
     Title: 'Batman Begins',
@@ -1192,7 +1192,8 @@ var watchList = [
     Runtime: '140 min',
     Genre: 'Action, Adventure',
     Director: 'Christopher Nolan',
-    Writer: 'Bob Kane (characters), David S. Goyer (story), Christopher Nolan (screenplay), David S. Goyer (screenplay)',
+    Writer:
+      'Bob Kane (characters), David S. Goyer (story), Christopher Nolan (screenplay), David S. Goyer (screenplay)',
     Actors: 'Christian Bale, Michael Caine, Liam Neeson, Katie Holmes',
     Plot:
       'After training with his mentor, Batman begins his fight to free crime-ridden Gotham City from the corruption that Scarecrow and the League of Shadows have cast upon it.',
@@ -1205,7 +1206,7 @@ var watchList = [
     imdbVotes: '972,584',
     imdbID: 'tt0372784',
     Type: 'movie',
-    Response: 'True'
+    Response: 'True',
   },
   {
     Title: 'Avatar',
@@ -1228,15 +1229,15 @@ var watchList = [
     imdbVotes: '876,575',
     imdbID: 'tt0499549',
     Type: 'movie',
-    Response: 'True'
-  }
+    Response: 'True',
+  },
 ];
 
 // Only change code below this line
 
 var filteredList = watchList
-  .filter(el => el['imdbRating'] >= 8)
-  .map(el => {
+  .filter((el) => el['imdbRating'] >= 8)
+  .map((el) => {
     return { title: el['Title'], rating: el['imdbRating'] };
   });
 
@@ -1249,10 +1250,10 @@ console.log(filteredList);
 // The global variable
 var s = [23, 65, 98, 5];
 
-Array.prototype.myFilter = function(callback) {
+Array.prototype.myFilter = function (callback) {
   // Only change code below this line
   var newArray = [];
-  this.forEach(el => {
+  this.forEach((el) => {
     if (callback(el)) {
       newArray.push(el);
     }
@@ -1262,7 +1263,7 @@ Array.prototype.myFilter = function(callback) {
   return newArray;
 };
 
-var new_s = s.myFilter(function(item) {
+var new_s = s.myFilter(function (item) {
   return item % 2 === 1;
 });
 
@@ -1339,7 +1340,7 @@ var watchList = [
     imdbVotes: '1,446,708',
     imdbID: 'tt1375666',
     Type: 'movie',
-    Response: 'True'
+    Response: 'True',
   },
   {
     Title: 'Interstellar',
@@ -1361,7 +1362,7 @@ var watchList = [
     imdbVotes: '910,366',
     imdbID: 'tt0816692',
     Type: 'movie',
-    Response: 'True'
+    Response: 'True',
   },
   {
     Title: 'The Dark Knight',
@@ -1371,7 +1372,8 @@ var watchList = [
     Runtime: '152 min',
     Genre: 'Action, Adventure, Crime',
     Director: 'Christopher Nolan',
-    Writer: 'Jonathan Nolan (screenplay), Christopher Nolan (screenplay), Christopher Nolan (story), David S. Goyer (story), Bob Kane (characters)',
+    Writer:
+      'Jonathan Nolan (screenplay), Christopher Nolan (screenplay), Christopher Nolan (story), David S. Goyer (story), Bob Kane (characters)',
     Actors: 'Christian Bale, Heath Ledger, Aaron Eckhart, Michael Caine',
     Plot:
       'When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, the caped crusader must come to terms with one of the greatest psychological tests of his ability to fight injustice.',
@@ -1384,7 +1386,7 @@ var watchList = [
     imdbVotes: '1,652,832',
     imdbID: 'tt0468569',
     Type: 'movie',
-    Response: 'True'
+    Response: 'True',
   },
   {
     Title: 'Batman Begins',
@@ -1394,7 +1396,8 @@ var watchList = [
     Runtime: '140 min',
     Genre: 'Action, Adventure',
     Director: 'Christopher Nolan',
-    Writer: 'Bob Kane (characters), David S. Goyer (story), Christopher Nolan (screenplay), David S. Goyer (screenplay)',
+    Writer:
+      'Bob Kane (characters), David S. Goyer (story), Christopher Nolan (screenplay), David S. Goyer (screenplay)',
     Actors: 'Christian Bale, Michael Caine, Liam Neeson, Katie Holmes',
     Plot:
       'After training with his mentor, Batman begins his fight to free crime-ridden Gotham City from the corruption that Scarecrow and the League of Shadows have cast upon it.',
@@ -1407,7 +1410,7 @@ var watchList = [
     imdbVotes: '972,584',
     imdbID: 'tt0372784',
     Type: 'movie',
-    Response: 'True'
+    Response: 'True',
   },
   {
     Title: 'Avatar',
@@ -1430,15 +1433,15 @@ var watchList = [
     imdbVotes: '876,575',
     imdbID: 'tt0499549',
     Type: 'movie',
-    Response: 'True'
-  }
+    Response: 'True',
+  },
 ];
 
 function getRating(watchList) {
   // Only change code below this line
   let nums = watchList
-    .filter(el => el['Director'] === 'Christopher Nolan')
-    .map(el => {
+    .filter((el) => el['Director'] === 'Christopher Nolan')
+    .map((el) => {
       return { rating: el['imdbRating'] };
     });
 
@@ -1449,3 +1452,17 @@ function getRating(watchList) {
   return averageRating;
 }
 console.log(getRating(watchList));
+
+//Functional Programming: Use Higher-Order Functions map, filter, or reduce to Solve a Complex Problem
+
+const squareList = (arr) => {
+  // Only change code below this line
+
+  let arr2 = arr.filter((el) => Number.isInteger(el) && el > 0).map((el) => el * el);
+
+  return arr2;
+  // Only change code above this line
+};
+
+const squaredIntegers = squareList([-3, 4.8, 5, 3, -3.2]);
+console.log(squaredIntegers);
