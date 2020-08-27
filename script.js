@@ -1501,8 +1501,20 @@ splitify('Hello World,I-am code');
 
 function sentensify(str) {
   // Only change code below this line
-  return str.split(/\W/).join(' ');
+  return str.split(/\W/).join(' '); // Only change code below this line
+  function urlSlug(title) {
+    return title
+      .toLowerCase()
+      .split(/\W/)
+      .filter((e) => e !== '')
+      .join('-');
+  }
+  // Only change code above this line
+
+  console.log(urlSlug(' Winter Is  Coming'));
 
   // Only change code above this line
 }
 sentensify('May-the-force-be-with-you');
+
+//Functional Programming: Apply Functional Programming to Convert Strings to URL Slugs
